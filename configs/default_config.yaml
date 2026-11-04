@@ -1,0 +1,46 @@
+# 移动机器人定位项目默认配置文件
+# Silent-Failure & Integrity Evaluation under Compound Sensor Degradation
+
+project:
+  name: "mobile_robot_integrity"
+  version: "1.0.0"
+  random_seed: 42
+
+simulation:
+  dt: 0.05                 # 采样周期 50ms (20Hz)
+  duration: 60.0           # 总时长 60s
+  trajectory_type: "figure8" # "straight", "circle", "figure8"
+  v_nominal: 1.0           # 线速度 1.0 m/s
+  omega_nominal: 0.2       # 角速度 0.2 rad/s
+
+sensors:
+  wheel:
+    sigma_v: 0.05          # 轮速白噪声标准差 (m/s)
+    sigma_omega: 0.02      # 角速度白噪声标准差 (rad/s)
+    slip_ratio: 0.0        # 默认无打滑
+  gnss:
+    sigma_pos: 0.15        # GNSS 水平测量标准差 (m)
+    update_rate_hz: 5      # GNSS 5Hz 采样 (每 4 个 step 一次更新)
+    enabled: true
+
+filter:
+  initial_cov:
+    x: 0.1
+    y: 0.1
+    theta: 0.05
+  process_noise:
+    q_v: 0.1               # 每步输入速度噪声标准差 (m/s)；Q=B diag(q^2) B^T dt^2
+    q_omega: 0.05          # 每步角速度噪声标准差 (rad/s)；不是连续时间谱密度
+  measurement_noise:
+    r_pos: 0.15            # 每轴位置观测标准差 (m)，R=r_pos^2 I
+
+integrity:
+  alert_limit: 0.5         # 安全告警阈值 AL (m)
+  k_integrity: 3.0         # 启发式协方差保护限乘子，未经完整性风险校准
+  nis_threshold: 9.21      # 二维 NIS 门限；无观测时不保持历史告警
+  nis_p_value: 0.99        # 卡方门限自由度 2, p=0.99 对应 ~9.21
+
+fault_protocol:
+  # 基准压力测试故障级别
+  slip_severities: [0.0, 0.05, 0.10, 0.20, 0.30]
+  gnss_dropout_durations: [0.0, 1.0, 3.0, 5.0, 10.0]

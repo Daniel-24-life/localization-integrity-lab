@@ -30,4 +30,4 @@ The primary experimental insight from the 144-condition synthetic benchmark is a
 ## 3. Data Provenance & Attribution
 
 - Real-world sensor calibrations, lever-arm offsets, and camera-to-wheel transform conventions reference the publicly released M3DGR dataset guidelines (`calibration.md`).
-- Synthetic trajectories are fully deterministic and self-contained within [`data/synthetic_generator.py`](file:///D:/AI文件/localization-integrity-lab/src/data/synthetic_generator.py), ensuring 100% reproducible execution on any standard workstation without downloading multi-gigabyte raw ROS bags.
+- Synthetic trajectories are fully deterministic and self-contained within [`data/synthetic_generator.py`](../src/data/synthetic_generator.py), ensuring 100% reproducible execution on any standard workstation without downloading multi-gigabyte raw ROS bags.

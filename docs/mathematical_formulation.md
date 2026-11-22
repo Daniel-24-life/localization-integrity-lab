@@ -64,7 +64,7 @@ For pure Brownian motion ($\mu = 0$), the analytical spectral solution via Fouri
 
 $$u(x, t) = 1 - \sum_{n=0}^{\infty} \frac{4}{(2n+1)\pi} \cos\left(\frac{(2n+1)\pi x}{2L}\right) \exp\left(-\frac{(2n+1)^2 \pi^2 \sigma^2 t}{8L^2}\right)$$
 
-This analytical benchmark is implemented in [`models/absorbing_pde.py`](file:///D:/AI文件/localization-integrity-lab/src/models/absorbing_pde.py) and verified against Monte Carlo simulations with $< 10^{-4}$ tolerance.
+This analytical benchmark is implemented in [`models/absorbing_pde.py`](../src/models/absorbing_pde.py) and verified against Monte Carlo simulations with $< 10^{-4}$ tolerance.
 
 ---
 

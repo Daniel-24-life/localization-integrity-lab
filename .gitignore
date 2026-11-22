@@ -28,3 +28,20 @@ htmlcov/
 venv/
 *.tmp
 results/runs/
+
+# Local secrets and generated artifacts
+.env*
+*.pem
+*.key
+*.pfx
+*.p12
+Cookies
+cookies.json
+node_modules/
+.venv/
+.next/
+.astro/
+.runtime/
+.DS_Store
+Thumbs.db
+*.log

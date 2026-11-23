@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/cover-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/cover-light.svg">
+  <img src="docs/cover-light.svg" alt="Project overview" width="1280">
+</picture>
+
 # Localization Integrity Lab · 移动机器人定位完整性研究
 
 <div align="center">
@@ -5,12 +11,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![Tests](https://img.shields.io/badge/tests-116%20passed-brightgreen.svg)]()
-[![Portfolio](https://img.shields.io/badge/Showcase-AIfile%20%2314-indigo.svg)](https://github.com/Daniel-24-life/AIfile)
+[![Portfolio](https://img.shields.io/badge/Showcase-AIfile%20%2314-indigo.svg)](https://github.com/Daniel-24-life/portfolio)
 
 **移动机器人动态定位误差传播、吸收边界 PDE 越界概率与有色噪声自适应滤波可复现研究基准**
 运动学 ODE 建模 · 误差可观测性 Gramian · 吸收边界 PDE (Kolmogorov 首次越界) · EKF 增广状态滤波 · 斯坦福图完好性评测
 
-[English](README.en.md) | [中文说明](README.md)
+[English](README.md) | [中文说明](README.md)
 
 </div>
 
@@ -96,5 +102,5 @@ python -m pytest -c pytest.ini tests/ -v
 
 ## 🔗 相关链接与生态
 - **数学推导全集**：[`docs/mathematical_formulation.md`](docs/mathematical_formulation.md)
-- **AIfile 作品集收录 (#14)**：[https://github.com/Daniel-24-life/AIfile](https://github.com/Daniel-24-life/AIfile)
+- **AIfile 作品集收录 (#14)**：[https://github.com/Daniel-24-life/portfolio](https://github.com/Daniel-24-life/portfolio)
 - **开发者个人主页**：[Daniel-24-life](https://github.com/Daniel-24-life)

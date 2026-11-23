@@ -1,8 +1,14 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/cover-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/cover-light.svg">
+  <img src="docs/cover-light.svg" alt="Project overview" width="1280">
+</picture>
+
 # Localization Integrity Lab
 
 A research benchmark for studying positioning error, protection levels, and threshold crossings in synthetic mobile-robot experiments.
 
-[中文说明](README.zh.md) · [Portfolio](https://github.com/Daniel-24-life/AIfile)
+[中文说明](README.zh.md) · [Portfolio](https://github.com/Daniel-24-life/portfolio)
 
 ![Research diagram linking motion models, filters, and benchmark evaluation](assets/screenshots/research_overview.svg)
 
